@@ -1,0 +1,42 @@
+{
+  "name": "@sliveapp/keys",
+  "version": "1.0.0",
+  "description": "Key management package for slive keys",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src/ --fix",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slive-app/keys.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.7",
+    "@babel/preset-typescript": "^7.23.3",
+    "@types/jest": "^27.5.2",
+    "@typescript-eslint/eslint-plugin": "^6.18.0",
+    "@typescript-eslint/parser": "^6.18.0",
+    "babel-jest": "^27.5.1",
+    "eslint": "^8.56.0",
+    "jest": "^27.5.1",
+    "typescript": "^4.9.5"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slive-app/keys/issues"
+  },
+  "homepage": "https://github.com/slive-app/keys#readme"
+}
